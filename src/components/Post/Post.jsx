@@ -4,23 +4,31 @@ import { Avatar } from '../Avatar/Avatar';
 import { format, formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 // CSS Import
 import styles from './Post.module.css';
 
+Post.propTypes = {
+  author: PropTypes.shape({
+    avatarUrl: PropTypes.string,
+    name: PropTypes.string,
+    role: PropTypes.string,
+  }).isRequired,
+  publishedAt: PropTypes.instanceOf(Date).isRequired,
+  content: PropTypes.arrayOf(PropTypes.shape({
+    type: PropTypes.string,
+    content: PropTypes.string,
+  })).isRequired,
+};
+
 export function Post({ author, publishedAt, content }) {
 
   const [comments, setComments] = useState([
-    1,
-    2,
+    'Parabéns pelo lançamento da sua aplicação! Incrível trabalho!',
   ])
 
-
-  function handleCreateNewComment() {
-    event.preventDefault();
-
-    setComments([...comments, comments.length + 1])
-  }
+  const [newCommentText, setNewCommentText] = useState('')
 
   const publishedDateFormatted = format(publishedAt, "d 'de' LLL 'às' HH:mm'h'", {
     locale: ptBR,
@@ -30,6 +38,24 @@ export function Post({ author, publishedAt, content }) {
     locale: ptBR,
     addSuffix: true,
   })
+
+  function handleCreateNewComment() {
+    event.preventDefault();
+
+    setComments([...comments, newCommentText]);
+    setNewCommentText('');
+  }
+
+  function handleNewCommentChange() {
+    setNewCommentText(event.target.value);
+  }
+
+  function deleteComment(commentToDelete) {
+    const commentsWithoutDeletedOne = comments.filter(comment => {
+      return comment !== commentToDelete
+    })
+    setComments(commentsWithoutDeletedOne);
+  }
 
   return (
     <article className={styles.post}>
@@ -51,9 +77,9 @@ export function Post({ author, publishedAt, content }) {
       <div className={styles.content}>
         {content.map(line => {
           if (line.type === 'paragraph') {
-            return <p>{line.content}</p>
+            return <p key={line.content}>{line.content}</p>
           } else if (line.type === 'link') {
-            return <p><a href="#">{line.content}</a></p>
+            return <p key={line.content}><a href="#">{line.content}</a></p>
           }
         })}
       </div>
@@ -62,7 +88,10 @@ export function Post({ author, publishedAt, content }) {
         <strong>Deixe seu feedback</strong>
 
         <textarea
+          name="userComment"
+          value={newCommentText}
           placeholder='Deixe seu comentário'
+          onChange={handleNewCommentChange}
         />
 
         <footer>
@@ -72,8 +101,15 @@ export function Post({ author, publishedAt, content }) {
 
       <div className={styles.commentList}>
         {comments.map(comment => {
-          return <Comment />
+          return (
+            <Comment
+              key={comment}
+              content={comment}
+              onDeleteComment={deleteComment}
+            />
+          )
         })}
+
       </div>
     </article>
   )
