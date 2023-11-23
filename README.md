@@ -44,7 +44,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ### 🎲 Rodando o projeto
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/ArchimedesRocha/Ignite-Feed>
+$ git clone <https://github.com/ArchimedesRocha/Project_Feed_Dev>
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd Ignite-Feed
