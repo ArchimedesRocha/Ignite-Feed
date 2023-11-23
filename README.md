@@ -1,7 +1,7 @@
 ### Banner do projeto
 
 <img src="./public/thumbnail.png">
-<hr>
+
 ### Shortcuts
 
 <p align="left">
@@ -13,34 +13,34 @@
  <a href="#autor">Autor</a> • 
  <a href="#mit-license">Lisença</a>
 </p>
-<hr>
+
 ### Título do projeto
 
 Feed Dev
-<hr>
+
 ### Resumo
 
 Projeto desenvolvido apartir do curso da RocketSeat que simula a construção de uma página de feedback, neste projeto aprendi sobre os conceitos mais importantes do React, entre eles estão componentização, propriedades, estados, imutabilidade e hooks, além de aplicar Typescript, assim adicionando tipagem estática à aplicação.
-<hr>
+
 ### Status do Projeto
 
 <h4 align="left"> 
 	🚧  Feed Dev 🚀 Finalizado...  🚧
 </h4>
-<hr>
+
 ### Features
 
 - [x] Deve adicionar comentários
 - [x] Deve excluir comentários
 - [x] Deve permitir o usuário apludir(like) a postagem
 - [x] Deve não permitir adicionar comentários vazios
-<hr>
+
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-<hr>
+
 ### 🎲 Rodando o projeto
 ```bash
 # Clone este repositório
@@ -57,7 +57,7 @@ $ npm run dev
 
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 ```
-<hr>
+
 ### Autor
 
 Olá sou Archimedes Rocha, apaixonado por tecnologia e um eterno estudante.
@@ -67,7 +67,7 @@ Quer conversar? Me chama por aqui
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/archimedes-rocha-81334827/)](https://www.linkedin.com/in/archimedes-rocha-81334827/)
 [![Whatsapp Badge](https://img.shields.io/badge/-Whatsapp-4CA143?style=flat-square&labelColor=4CA143&logo=whatsapp&logoColor=white&link=https://api.whatsapp.com/send?phone=+5582988861433&text=Hello!)](https://api.whatsapp.com/send?phone=+5582988861433&text=Hello!)
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:dev.archimedesrocha@gmail.com)](mailto:dev.archimedesrocha@gmail.com)
-<hr>
+
 ### MIT License
 
 Copyright ©️ 2024 Archimedes Rocha
