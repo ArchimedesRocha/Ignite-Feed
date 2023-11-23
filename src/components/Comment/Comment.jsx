@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 // CSS Import
 import styles from './Comment.module.css'
+import { useState } from 'react';
 
 Comment.propTypes = {
   publishedAt: PropTypes.instanceOf(Date).isRequired,
@@ -17,9 +18,18 @@ Comment.propTypes = {
 
 export function Comment({ content, onDeleteComment }) {
 
+  const [likeCount, setLikeCount] = useState(0);
+
   function handleDeleteComment() {
     onDeleteComment(content)
   }
+
+  function handleLikeComment() {
+    setLikeCount((state) => {
+      return state + 1
+    });
+  }
+
 
   return (
     <div className={styles.comment}>
@@ -42,14 +52,12 @@ export function Comment({ content, onDeleteComment }) {
         </div>
 
         <footer>
-          <button>
-            <ThumbsUp size={20} />
-            Aplaudir <span>20</span>
+          <button onClick={handleLikeComment}>
+            <ThumbsUp />
+            Aplaudir <span>{likeCount}</span>
           </button>
         </footer>
       </div>
-
-
     </div>
   )
 }
