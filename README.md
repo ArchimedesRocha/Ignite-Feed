@@ -6,25 +6,25 @@
 
 <p align="center">
  <a href="#titulo-do-projeto">Título do projeto</a> •
- <a href="#resumo-do-projeto">Resumo sobe o projeto</a> • 
+ <a href="#resumo">Resumo</a> • 
  <a href="#status-do-projeto">Status do Projeto</a> • 
  <a href="#features">Features</a> • 
- <a href="#rodando-o-projeto">Rodando o projeto</a> • 
+ <a href="#-rodando-o-projeto">Rodando o projeto</a> • 
  <a href="#autor">Autor</a> • 
- <a href="#lisenca">Lisença</a>
+ <a href="#mit-lisenca">Lisença</a>
 </p>
 
 ### Título do projeto
 
 Feed Dev
 
-### Resumo sobe o projeto
+### Resumo
 
 Projeto desenvolvido apartir do curso da RocketSeat que simula a construção de uma página de feedback, neste projeto aprendi sobre os conceitos mais importantes do React, entre eles estão componentização, propriedades, estados, imutabilidade e hooks, além de aplicar Typescript, assim adicionando tipagem estática à aplicação.
 
 ### Status do Projeto
 
-<h4 align="center"> 
+<h4 align="left"> 
 	🚧  Feed Dev 🚀 Finalizado...  🚧
 </h4>
 
