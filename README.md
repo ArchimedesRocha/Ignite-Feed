@@ -11,7 +11,7 @@
  <a href="#features">Features</a> • 
  <a href="#-rodando-o-projeto">Rodando o projeto</a> • 
  <a href="#autor">Autor</a> • 
- <a href="#mit-lisenca">Lisença</a>
+ <a href="#mit-license">Lisença</a>
 </p>
 
 ### Título do projeto
