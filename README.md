@@ -9,8 +9,8 @@
  <a href="#resumo-do-projeto">Resumo sobe o projeto</a> • 
  <a href="#status-do-projeto">Status do Projeto</a> • 
  <a href="#features">Features</a> • 
- <a href="#rodando-o-projeto">Rodando o projeto</a>
- <a href="#autor">Autor</a>
+ <a href="#rodando-o-projeto">Rodando o projeto</a> • 
+ <a href="#autor">Autor</a> • 
  <a href="#lisenca">Lisença</a>
 </p>
 
