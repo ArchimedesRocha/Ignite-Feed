@@ -1,30 +1,11 @@
-# React + TypeScript + Vite
+<img src="/assets/img/arquivo.gif">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Resumo sobe o projeto
 
-Currently, two official plugins are available:
+Projeto que simula a construção de uma página de feedback, neste projeto aprendi sobre os conceitos mais importantes do React, entre eles estão componentização, propriedades, estados, imutabilidade e hooks, além de aplicar Typescript, assim adicionando tipagem estática à aplicação.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Para rodar o projeto
 
-## Expanding the ESLint configuration
+Após fazer o donwload ou clonar o repositório, basta rodar um npm install ou yarn add, vai de acordo com o gerenciador de pacotes de sua preferência que pode variar.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Quando a instalação for conluida, starte o projeto, supondo que você utiliza npm, rode um npm run dev, se utilizar yarn rode, yarn dev, novamente  vai de acordo com o gerenciador de pacotes de sua preferência que pode variar.
