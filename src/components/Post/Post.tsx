@@ -3,26 +3,29 @@ import { Comment } from '../Comment/Comment';
 import { Avatar } from '../Avatar/Avatar';
 import { format, formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
 
 // CSS Import
 import styles from './Post.module.css';
 
-Post.propTypes = {
-  author: PropTypes.shape({
-    avatarUrl: PropTypes.string,
-    name: PropTypes.string,
-    role: PropTypes.string,
-  }).isRequired,
-  publishedAt: PropTypes.instanceOf(Date).isRequired,
-  content: PropTypes.arrayOf(PropTypes.shape({
-    type: PropTypes.string,
-    content: PropTypes.string,
-  })).isRequired,
-};
+interface Author {
+  name: string;
+  role: string;
+  avatarUrl: string;
+}
 
-export function Post({ author, publishedAt, content }) {
+interface Content {
+  type: 'paragraph' | 'link';
+  content: string;
+}
+
+interface PostProps {
+  author: Author;
+  publishedAt: Date;
+  content: Content[];
+}
+
+export function Post({ author, publishedAt, content }: PostProps) {
 
   const [comments, setComments] = useState([
     'Parabéns pelo lançamento da sua aplicação! Incrível trabalho!',
@@ -39,18 +42,23 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   })
 
-  function handleCreateNewComment() {
+  function handleCreateNewComment(event: FormEvent) {
     event.preventDefault();
 
     setComments([...comments, newCommentText]);
     setNewCommentText('');
   }
 
-  function handleNewCommentChange() {
+  function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
+    event.target.setCustomValidity('')
     setNewCommentText(event.target.value);
   }
 
-  function deleteComment(commentToDelete) {
+  function handleNewCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
+    event.target.setCustomValidity('Esse campo é obrigatório!')
+  }
+
+  function deleteComment(commentToDelete: string) {
     const commentsWithoutDeletedOne = comments.filter(comment => {
       return comment !== commentToDelete
     })
@@ -94,6 +102,8 @@ export function Post({ author, publishedAt, content }) {
           value={newCommentText}
           placeholder='Deixe seu comentário'
           onChange={handleNewCommentChange}
+          onInvalid={handleNewCommentInvalid}
+          required
         />
 
         <footer>

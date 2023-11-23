@@ -1,22 +1,17 @@
 // General Imports
 import { Trash, ThumbsUp } from 'phosphor-react'
 import { Avatar } from '../Avatar/Avatar'
-import PropTypes from 'prop-types';
 
 // CSS Import
 import styles from './Comment.module.css'
 import { useState } from 'react';
 
-Comment.propTypes = {
-  publishedAt: PropTypes.instanceOf(Date).isRequired,
-  content: PropTypes.arrayOf(PropTypes.shape({
-    type: PropTypes.string,
-    content: PropTypes.string,
-  })).isRequired,
-  onDeleteComment: PropTypes.string.isRequired,
-};
+interface CommentProps {
+  content: string;
+  onDeleteComment: (comment: string) => void;
+}
 
-export function Comment({ content, onDeleteComment }) {
+export function Comment({ content, onDeleteComment }: CommentProps) {
 
   const [likeCount, setLikeCount] = useState(0);
 
@@ -33,7 +28,7 @@ export function Comment({ content, onDeleteComment }) {
 
   return (
     <div className={styles.comment}>
-      <Avatar withoutBorder src="https://github.com/josefirmino.png" />
+      <Avatar withoutBorder src="https://github.com/josefirmino.png" alt="Foto do perfil do github" />
 
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
