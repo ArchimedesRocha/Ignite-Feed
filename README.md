@@ -1,4 +1,4 @@
-<img src="/assets/img/arquivo.gif">
+<img src="/thumbnail.png">
 
 # Resumo sobe o projeto
 
