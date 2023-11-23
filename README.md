@@ -1,4 +1,4 @@
-<img src="/thumbnail.png">
+<img src="./public/thumbnail.png">
 
 # Resumo sobe o projeto
 
