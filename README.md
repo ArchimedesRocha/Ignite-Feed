@@ -72,7 +72,7 @@ Olá sou Archimedes Rocha, apaixonado por tecnologia e um eterno estudante.
 
 ### MIT License
 
-Copyright (c) <2024> Archimedes Rocha
+Copyright ©️ 2024 Archimedes Rocha
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
