@@ -9,7 +9,7 @@
  <a href="#resumo">Resumo</a> • 
  <a href="#status-do-projeto">Status do Projeto</a> • 
  <a href="#features">Features</a> • 
- <a href="#-rodando-o-projeto">Rodando o projeto</a> • 
+ <a href="#rodando-o-projeto">Rodando o projeto</a> • 
  <a href="#autor">Autor</a> • 
  <a href="#mit-license">Lisença</a>
 </p>
@@ -41,7 +41,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-### 🎲 Rodando o projeto
+### Rodando o projeto
 ```bash
 # Clone este repositório
 $ git clone <https://github.com/ArchimedesRocha/Project_Feed_Dev>
